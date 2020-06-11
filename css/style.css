@@ -1,0 +1,30 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+.jumbotron {
+    padding: 15px;;
+    max-width: 500px;
+    background-color: slategrey;
+    margin-top: 50px;
+}
+.cuadrados{
+    background-color: springgreen;
+    border-radius: 5px;
+    width: 90%;
+    height: 90%;
+    margin: 5px;
+    font-size: 40pt;
+    text-align: center;
+    font-weight: bold;
+}
+.cuadrados:hover{
+    background-color: red;
+    cursor:pointer;
+}
+.ganadora{
+    background-color: tomato;
+}
+.bloqueo{
+    pointer-events: none;
+    opacity: 0.4;
+}

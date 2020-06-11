@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <title>Juego Gato</title>
+    </head>
+    <body>
+        <center><h2>Juego Gato</h2></center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-12"></div>      
+                <div class="col-md-5 col-sm-12">
+                    <div class="jumbotron">
+                        <div class="row">
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                            <div class="col"><div class="cuadrados">&nbsp;</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header">Siguiente Jugador</div>
+                        <div class="card-body">
+                        <h5 class="card-title" id="turno">X</h5>
+                        </div>
+                    </div>
+                    <button class="btn btn-warning" id="reset">Resetear</button>
+
+                </div> 
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+            <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button> -->
+                </div>
+                <div class="modal-body">
+                YOU WIN!!!
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</html>
