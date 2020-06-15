@@ -20,16 +20,38 @@
     function x_puntaje(){
       puntaje_x=puntaje_x+1;
       $('#puntaje_x').html(puntaje_x);
+      //LOCAL STORGE
+      localStorage.setItem('valorx',puntaje_x);
     }
     function y_puntaje(){
       puntaje_y=puntaje_y+1;
       $('#puntaje_y').html(puntaje_y);
+      //LOCAL STORGE
+      localStorage.setItem('valoro',puntaje_y);
+    }
+    //LOCAL STORGE 
+    //--->X
+    if (localStorage.getItem('valorx')==null){
+      $('#puntaje_x').text('0');
+    }
+    else
+    {
+      $('#puntaje_x').html(localStorage.getItem('valorx'));
+    }
+     //--->O
+    if (localStorage.getItem('valoro')==null){
+      $('#puntaje_y').text('0');
+    }
+    else
+    {
+      $('#puntaje_y').html(localStorage.getItem('valoro'));
     }
       // al hacer click en reset
     $('#reset').on('click', function(){
         reset();
         puntaje_x=0;
         puntaje_y=0;
+        localStorage.clear();
         $('#puntaje_x').html('0');
         $('#puntaje_y').html('0');
     })
@@ -63,32 +85,38 @@
       if (valores[0]=="X"&& valores[1]=="X"&& valores[2]=="X"){
         x_puntaje();
         add_winner_class(0,1,2);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();
       }
       else if(valores[3]=="X"&& valores[4]=="X"&& valores[5]=="X"){
         x_puntaje();
         add_winner_class(3,4,5);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();   
       }
       else if(valores[6]=="X"&& valores[7]=="X"&& valores[8]=="X"){
         x_puntaje();
         add_winner_class(6,7,8);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();
       }
       //O
       if (valores[0]=="O"&& valores[1]=="O"&& valores[2]=="O"){
         y_puntaje();
         add_winner_class(0,1,2);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();
       }
       else if(valores[3]=="O"&& valores[4]=="O"&& valores[5]=="O"){
         y_puntaje();
         add_winner_class(3,4,5);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();   
       }
       else if(valores[6]=="O"&& valores[7]=="O"&& valores[8]=="O"){
         y_puntaje();
         add_winner_class(6,7,8);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();
       }
       //--------------> VERTICAL
@@ -96,32 +124,38 @@
       if (valores[0]=="X"&& valores[3]=="X"&& valores[6]=="X"){
         x_puntaje();
         add_winner_class(0,3,6);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();
       }
       else if(valores[1]=="X"&& valores[4]=="X"&& valores[7]=="X"){
         x_puntaje();
         add_winner_class(1,4,7);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();   
       }
       else if(valores[2]=="X"&& valores[5]=="X"&& valores[8]=="X"){
         x_puntaje();
         add_winner_class(2,5,8);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();
       }
       //O
       if (valores[0]=="O"&& valores[3]=="O"&& valores[6]=="O"){
         y_puntaje();
         add_winner_class(0,3,6);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();
       }
       else if(valores[1]=="O"&& valores[4]=="O"&& valores[7]=="O"){
         y_puntaje();
         add_winner_class(1,4,7);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();   
       }
       else if(valores[2]=="O"&& valores[5]=="O"&& valores[8]=="O"){
         y_puntaje();
         add_winner_class(2,5,8);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();
       } 
       //--------------> DIAGONAL
@@ -129,25 +163,31 @@
       if (valores[0]=="X"&& valores[4]=="X"&& valores[8]=="X"){
         x_puntaje();
         add_winner_class(0,4,8);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();
       }
       else if(valores[2]=="X"&& valores[4]=="X"&& valores[6]=="X"){
         x_puntaje();
         add_winner_class(2,4,6);
+        $('#ganador').text("X");
         no_te_metas_en_mis_asuntoz();   
       }
       //O
       if (valores[0]=="O"&& valores[4]=="O"&& valores[8]=="O"){
         y_puntaje();
         add_winner_class(0,4,8);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();
       }
       else if(valores[2]=="O"&& valores[4]=="O"&& valores[6]=="O"){
         y_puntaje();
         add_winner_class(2,4,6);
+        $('#ganador').text("O");
         no_te_metas_en_mis_asuntoz();   
       }
     });
+
+
 
     
 

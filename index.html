@@ -5,15 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">        
         <title>Juego Gato</title>
     </head>
     <body>
-        <center><h2>Juego Gato</h2></center>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-12"></div>      
                 <div class="col-md-5 col-sm-12">
+                    <br>
+                    <p id="texto">Turno:<span id="turno">X</span>
+                        <button class="" id="reset">
+                            <img src="images/reset.svg" width="45" alt="">
+                       </button>
+                    </p>
                     <div class="jumbotron">
                         <div class="row">
                             <div class="col"><div class="cuadrados">&nbsp;</div></div>
@@ -31,39 +36,23 @@
                             <div class="col"><div class="cuadrados">&nbsp;</div></div>
                         </div>
                     </div>
+                    <p class="linea">X:&nbsp;<span id="puntaje_x">0</span>&nbsp; &nbsp; &nbsp;&nbsp;O:&nbsp;<span id="puntaje_y">0</span></p>
                 </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="card bg-light mb-3">
-                        <div class="card-header">Siguiente Jugador</div>
-                        <div class="card-body">
-                        <h5 class="card-title" id="turno">X</h5>
-                        </div>
-                    </div>
-                    <div class="card bg-light mb-3">
-                        <div class="card-header">Puntajes Parciales</div>
-                        <div class="card-body">
-                            <p class="linea">X:&nbsp;</p><p class="linea" id="puntaje_x">0</p><br><br>
-                            <p class="linea">Y:&nbsp;</p><p class="linea" id="puntaje_y">0</p>
-                        </div>
-                    </div>
-                    <button class="btn btn-warning" id="reset">Resetear</button>
-
-                </div> 
+                <div class="col-md-3"></div> 
             </div>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <img src="images/win.svg"  width="120" alt=""><br><br>
+                        <p>Felicidades <span id="ganador"> </span> has ganado!!!</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                YOU WIN!!!
-                </div>
-            </div>
             </div>
         </div>
     </body>
