@@ -13,10 +13,14 @@
         $('#turno').html('X');
         $('.cuadrados').removeClass('ganadora');
     }
-    var puntaje_x=$('#puntaje_x').html();
+    var valorx=localStorage.getItem('valorx');
+    var valoro=localStorage.getItem('valoro');
+
+    var puntaje_x=valorx;
     puntaje_x=parseInt(puntaje_x);
-    var puntaje_y=$('#puntaje_y').html();
+    var puntaje_y=valoro;
     puntaje_y=parseInt(puntaje_y);
+
     function x_puntaje(){
       puntaje_x=puntaje_x+1;
       $('#puntaje_x').html(puntaje_x);
