@@ -13,22 +13,19 @@
         $('#turno').html('X');
         $('.cuadrados').removeClass('ganadora');
     }
-    var valorx=localStorage.getItem('valorx');
-    var valoro=localStorage.getItem('valoro');
-
-    var puntaje_x=valorx;
-    puntaje_x=parseInt(puntaje_x);
-    var puntaje_y=valoro;
-    puntaje_y=parseInt(puntaje_y);
-
+    
     function x_puntaje(){
-      puntaje_x=puntaje_x+1;
+      var puntaje_x=$('#puntaje_x').html();
+      puntaje_x=parseInt(puntaje_x);
+      puntaje_x+=1;
       $('#puntaje_x').html(puntaje_x);
       //LOCAL STORGE
       localStorage.setItem('valorx',puntaje_x);
     }
     function y_puntaje(){
-      puntaje_y=puntaje_y+1;
+      var puntaje_y=$('#puntaje_y').html();
+      puntaje_y=parseInt(puntaje_y);
+      puntaje_y+=1;
       $('#puntaje_y').html(puntaje_y);
       //LOCAL STORGE
       localStorage.setItem('valoro',puntaje_y);
